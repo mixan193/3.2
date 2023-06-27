@@ -16,6 +16,7 @@ namespace _3._2
             int[] cards = new int[cardsCount];
             for(int i = 0; i < cardsCount; i++)
             {
+                Console.WriteLine($"Введите карту {i + 1}");
                 cards[i] = EnterCard();
             }
             Sort(ref cards);
@@ -37,7 +38,7 @@ namespace _3._2
                     sum += card;
                 }
             }
-            Console.Write($"Вы набрали ");
+            Console.Write("Вы набрали ");
             if(sum < 21) 
             {
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -85,7 +86,6 @@ namespace _3._2
             int card = 0;
             bool isAccepted = false;
             string temp;
-            Console.WriteLine("Введите карту");
             while (!isAccepted)
             {
                 temp = Console.ReadLine();
